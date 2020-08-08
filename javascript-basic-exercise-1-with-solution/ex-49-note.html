@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function alphabet(str) {
+		var result = "";
+
+		for (var i = 0 ; i < str.length; i++){
+		if (str.charCodeAt(i) == 90) {
+		result += "A";
+		continue;
+		}
+
+		if (str.charCodeAt(i) == 122) {
+		result += "a";
+		continue;
+		}
+
+		if (str.charCodeAt(i) == 32) {
+		result += " ";
+		continue;
+		}
+
+		result += String.fromCharCode(str.charCodeAt(i)+1);
+		}
+		return result;
+		}
+
+		console.log(alphabet("PYTHON")); //QZUIPO
+		console.log(alphabet("Java and Script")); // Kbwb boe Tdsjqu
+		console.log(alphabet("Hello")); //Ifmmp
+	</script>
+</body>
+</html>

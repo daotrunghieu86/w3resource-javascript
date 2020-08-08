@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x,y){
+		  if ((x==15 || y==15) || (Math.abs(x+y)==15) || (Math.abs(x-y)==15)){
+		    return true;
+		  }else{
+		    return false;
+		  }
+		}
+		console.log(check(12,3));
+		console.log(check(15,3));
+		console.log(check(-12,3));
+		console.log(check(12,-3));
+		console.log(check(-12,-3));
+		console.log(check(123,3));
+	</script>
+</body>
+</html>

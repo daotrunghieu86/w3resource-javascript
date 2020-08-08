@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  var sum = 0;
+		  for (var i = 0; i < x.length; i++){
+		    for (var j = i + 1; j < x.length; j++){
+		      if (x[i] > x[j]) sum++;
+		    }
+		  }
+		  return sum;
+		}
+		console.log(check([0, 3, 2, 5, 9]));  
+		console.log(check([1,5,2,5,9]));
+		console.log(check([10, 30, 20, -10]));  
+	</script>
+</body>
+</html>

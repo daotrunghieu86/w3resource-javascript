@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x,y,z){
+		  if (x<y && y<z){
+		    return "Strict Mode";
+		  }else if (z>y) {
+		    return "Sort Mode";
+		  }
+		  return "undefined";
+		}
+		console.log(check(32,3,2));
+		console.log(check(3,5,76));
+		console.log(check(13,5,76));
+	</script>
+</body>
+</html>

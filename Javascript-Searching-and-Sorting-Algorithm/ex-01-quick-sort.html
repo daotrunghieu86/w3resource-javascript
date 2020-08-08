@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var item = [5,3,7,6,2,9,3,4,8,2];
+    
+    function swap(item, leftIndex, rightIndex){
+      var temp = item[leftIndex];
+      item[leftIndex] = item[rightIndex];
+      item[rightIndex] = temp;
+    }
+
+    function paration(item, left, right){
+      let pivot = item[Math.floor((left + right)/2)];
+      let i = left;
+      let j = right;
+      while(i <= j){
+        while (item[i] < pivot){
+          i++;
+        }
+        while (item[j] > pivot){
+          j--;
+        }
+        if (i <= j){
+          swap(item, i, j);
+          i++;
+          j--;
+        }
+        
+      }
+      return i;
+    }
+
+    function quickSort(item, left, right){
+      if(item.length > 1){
+        let index = paration(item, left, right);
+        if (left < index-1){
+          quickSort(item, left, index-1);
+        }
+        if (right > index){
+          quickSort(item, index, right);
+        }
+      }
+      return item;
+    }
+
+    var result = quickSort(item, 0, item.length-1);
+    console.log(result);
+
+
+    // solution 2:
+    // function quickSort(org){
+    //   if (org.length <=1){
+    //     return org;
+    //   }else{
+    //     let   left = [],
+    //           right = [],
+    //           pivot = org.pop(),
+    //           result = [];
+    //     for (var i = 0; i < org.length; i++){
+    //       if (org[i] < pivot){
+    //         left.push(org[i]);
+    //       }
+    //       if (org[i] > pivot){
+    //         right.push(org[i]);
+    //       }
+    //       // if equal ?
+    //     }
+    //     return result.concat(quickSort(left), pivot, quickSort(right));
+    //   }
+    // }
+    // var org = [3, 0, 9, 7, 2, 5, -1, 4, 1 ];
+    // console.log(quickSort(org));
+  </script>
+</body>
+</html>

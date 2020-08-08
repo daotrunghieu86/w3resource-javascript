@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset=utf-8 />
+<title>Remove items from a dropdown list</title>
+</head><body><form>
+  <select id="colorSelect">
+    <option>Red</option>
+    <option>Green</option>
+    <option>White</option>
+    <option>Black</option>
+  </select>
+  // xoa item thu 2
+  <input type="button" onclick="removecolor()" value="Select and Remove">
+</form>
+    <script>
+      function removecolor(){
+        var remove = document.getElementById("colorSelect");
+        remove.remove(remove.selectedIndex);
+      }
+
+
+
+        
+    const selec = document.getElementById('colorSelect');
+    console.log(selec.childNodes);
+    const optio = document.getElementsByTagName('option');
+    console.log(optio);
+
+    // function removecolor() {
+    //   optio.remove(optio[0]);
+    // }
+
+    // function removecolor() {
+    //   selec.remove(selec.firstChild);
+    // }
+    
+    // var n = 1;
+    // function removecolor() {
+    //   selec.removeChild(selec.childNodes[n]);
+    //   n++;
+    // }
+
+    
+    </script>
+</body></html>

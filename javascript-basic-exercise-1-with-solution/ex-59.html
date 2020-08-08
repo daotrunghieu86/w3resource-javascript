@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  if (x.length % 2 == 0){
+		    var x1 = x.substring((x.length)/2,0);
+		    return x1;
+		  }else{
+		    return false;
+		  }
+		}
+		console.log(check("123456"));
+		console.log(check("asdff"));
+	</script>
+</body>
+</html>

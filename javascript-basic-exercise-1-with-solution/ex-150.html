@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  x = x.toString();
+		  var result = [];
+		  if (x.length % 2 !== 0){
+		    return false;
+		  }
+
+		  for (var i = 0; i < x.length -1 ; i+=2){
+		    result.push(x[i+1]);
+		    result.push(x[i]);
+		  }
+
+		  return result.join("");
+		}
+		console.log(check(1234));
+		console.log(check(123456));
+		console.log(check(12345));
+	</script>
+</body>
+</html>

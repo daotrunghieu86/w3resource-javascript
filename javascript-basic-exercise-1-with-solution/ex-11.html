@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" id="doC" value="Nhập độ C muốn chuyển sang độ F">
+	<button onclick="chuyensang_doF()">Chuyển sang độ F</button>
+	<p><span id="result_doF"></span> độ F</p>
+	<hr>
+	<input type="text" id="doF" value="Nhập độ F muốn chuyển sang độ C">
+	<button onclick="chuyensang_doC()">Chuyển sang độ C</button>
+	<p><span id="result_doC"></span> độ C</p>
+	<script>
+		function chuyensang_doF(){
+			var x = document.getElementById('doC').value;
+			var z = 9/5*x + 32;
+			document.getElementById("result_doF").innerHTML = z;
+		}
+		function chuyensang_doC(){
+			var y = document.getElementById('doF').value;
+			var a = 5/9*(y-32);
+			document.getElementById("result_doC").innerHTML = a;
+		}
+	</script>
+</body>
+</html>

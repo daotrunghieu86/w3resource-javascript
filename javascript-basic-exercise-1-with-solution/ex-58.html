@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  if (x.length>3){
+		    var x1 = x.substring(x.length-3,x.length);
+		    return x + x1+x1+x1+x1;
+		  }else{
+		    return false;
+		  }
+		}
+		console.log(check("conga"));
+		console.log(check("f"));
+	</script>
+</body>
+</html>

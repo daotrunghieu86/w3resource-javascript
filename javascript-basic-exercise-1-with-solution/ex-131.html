@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  var y = [x[0]];
+		  for (var i=1; i < x.length ; i++){
+		    var sum = 0;
+		    for (var j=0; j <= i ; j++){
+		      sum += x[j];
+		    }
+		    y.push(sum);
+		  }
+		  return y;
+		}
+		console.log(check([4,1,3,2]));
+	</script>
+</body>
+</html>

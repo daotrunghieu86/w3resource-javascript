@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x,y){
+		  if (x!=y){
+		    if ((x>=40)&&(x<=60)&&(y>=40)&&(y<=60)){
+		      if (x-y>0){
+		        console.log(x + " la so lon hon");
+		      }else{
+		        console.log(y + " la so lon hon");
+		      }
+		    }else{
+		      return false;
+		    }
+		  }else{
+		    return false;
+		  }
+		}
+		console.log(check(60,23));
+		console.log(check(22,53));
+		console.log(check(45,46));
+	</script>
+</body>
+</html>

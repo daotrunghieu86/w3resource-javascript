@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function ex55(str){
+		var p = str.match(/[p]/gi);
+		p = p.length;
+		var t = str.match(/[t]/gi);
+		t = t.length;
+		if(p === t){
+		return true;
+		}
+		else return false;
+		}
+		console.log(ex55("ptt"));
+		console.log(ex55("pptt"))
+	</script>
+</body>
+</html>

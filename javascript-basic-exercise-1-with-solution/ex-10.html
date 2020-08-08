@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>1st Number: 
+	<input type="Number" id="number1" value="Nhap so"></p>
+	<p>2nd Number: 
+	<input type="Number" id="number2" value="Nhap so"></p>
+	<button onclick="Multiply()">Multiply</button>
+	<button onclick="Divide()">Devide</button>
+	<p>The Result is: </p>
+	<p id="result1"></p>
+	<p id="result2"></p>
+	<script>
+		function Multiply(){
+			var x = document.getElementById('number1').value;
+			var y = document.getElementById("number2").value;
+			var z = x * y;
+			document.getElementById("result1").innerHTML = z;
+		}
+		function Divide(){
+			var x = document.getElementById('number1').value;
+			var y = document.getElementById("number2").value;
+			var a = x / y;
+			document.getElementById("result2").innerHTML = a;
+		}
+	</script>
+</body>
+</html>

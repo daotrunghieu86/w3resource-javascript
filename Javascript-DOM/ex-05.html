@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- <link rel="stylesheet" href="test/ddmmsass.css"> -->
+</head>
+<body>
+	
+	<table id="sampleTable" border="1">
+		<tr><td>Row1 cell1</td>
+			<td>Row1 cell2</td></tr>
+		<tr><td>Row2 cell1</td>
+			<td>Row2 cell2</td></tr>
+	</table>
+	<br>
+	<input type="button" onclick="insert_Row()" value="Insert row"> 
+    
+    <script>
+    let counter = 3;
+    function insert_Row() {
+    const tds = [document.createElement('td'),document.createElement('td')];
+    const tr = document.createElement('tr');
+
+    tr.append(...tds.map((el, i) => {
+    // ParentNode.append() reference developer.mozilla.org
+        console.log(i);
+        el.innerHTML = `Row${counter} cell${i+1}`;
+        return el;
+    }));
+    counter++;
+    document.getElementById('sampleTable').appendChild(tr);
+    }
+    </script>
+
+
+
+<script>
+    let n = 3;
+    function insert_Row() {
+        const tab = document.getElementById('sampleTable'),
+            row = tab.insertRow(n-1),
+            cell1 = row.insertCell(0),
+            cell2 = row.insertCell(1);
+        cell1.innerHTML = 'Row' + n + ' cell1';
+        cell2.innerHTML = 'Row' + n + ' cell2';
+        n++;
+    }
+</script>
+
+
+<script>
+    const tab = document.getElementById('sampleTable');
+    var n = 3;
+    function insert_Row() {
+        
+      var insertRow = document.createElement('tr');
+      var insertColumn1 = document.createElement('td');
+      var insertColumn2 = document.createElement('td');
+      insertColumn1.innerHTML = "Row" + n + ' cell1';
+      insertColumn2.innerHTML = "Row" + n + ' cell2';
+      insertRow.appendChild(insertColumn1);
+      insertRow.appendChild(insertColumn2);
+      tab.appendChild(insertRow);
+    
+      n++
+    }
+</script>
+
+</body>
+</html>

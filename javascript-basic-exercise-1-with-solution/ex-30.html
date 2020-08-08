@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  if (x.length < 6){
+		    return x;
+		  }
+		  let y = x;
+		  if (x.substring(4,10) === "script"){
+		    y = x.substring(0,4);
+		  }
+		  return y;
+		}
+		console.log(check("javascripttt"))
+		console.log(check("javascript"));
+		console.log(check("conca"));
+		console.log(check("concanhatao"));
+	</script>
+</body>
+</html>

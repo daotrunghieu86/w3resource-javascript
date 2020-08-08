@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function prime_factors(num) {
+		  function is_prime(num){
+		    var i;
+		    if (num % i === 0){
+		      return false;
+		    }else {return true;}
+		  }
+		  const result = [];
+		  for (let i = 2; i <= num; i++)
+		  {
+		    while (is_prime(i) && num % i === 0) 
+		    {
+		      if (!result.includes(i)) result.push(i);
+		      num /= i;
+		    }
+		  }
+		  return result;
+		}
+		console.log(prime_factors(100));
+		console.log(prime_factors(101));
+		console.log(prime_factors(103));
+		console.log(prime_factors(104));
+		console.log(prime_factors(105));
+	</script>
+</body>
+</html>

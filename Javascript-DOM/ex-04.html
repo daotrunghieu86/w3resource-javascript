@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<head> 
+    <meta charset=utf-8 /> 
+    <title>Collect the value of href, hreflang, rel, target, and type attributes of a link</title> 
+    </head> 
+    <body> 
+    <p><a id="w3r" type="text/html" hreflang="en-us" rel="nofollow" target="_self" href="https://www.w3resource.com/">w3resource</a></p> 
+    <button onclick="getAttributes()">Click here to get the attribute's value</button> 
+
+    <script>
+        function getAttributes(){
+            var x = document.getElementById("w3r");
+            console.log("type"x.getAttribute("type"));
+            console.log(x.getAttribute("hreflang"));
+            console.log(x.getAttribute("rel"));
+            console.log(x.getAttribute("target"));
+            console.log(x.getAttribute("href"));
+        }
+    </script>
+
+    ////////
+
+    <script>
+        function getAttributes(){
+            var x = document.getElementById("w3r").type;
+            console.log("href:" + x);
+            var y = document.getElementById("w3r").hreflang;
+            console.log("hreflang:" + y);
+            var z = document.getElementById("w3r").rel;
+            console.log("rel:" + z);
+            var a = document.getElementById("w3r").target;
+            console.log("target:" + a);
+            var b = document.getElementById("w3r").href;
+            console.log("href:" + b);
+        }
+    </script>
+
+    //////////
+
+    
+
+</body> 
+</html>

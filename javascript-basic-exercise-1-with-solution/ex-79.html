@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  if (x.length == 0){
+		    return true;
+		  }else if (x.length == 1){
+		    if (x[0] == 30 || x[0] == 40){
+		      return true;
+		    }else{
+		      return false;
+		    }
+		  }else if (x.length == 2){
+		    if (x[0] == 30 || x[0] == 40 || x[1] == 30 || x[1] == 40){
+		      return true;
+		    }else{
+		      return false;
+		    }
+		  }
+		}
+		console.log(check([30]));
+		console.log(check([]));
+		console.log(check([30,40]));
+		console.log(check([0,80]));
+	</script>
+	<hr>
+	<script>
+		function check(x){
+		  var a = x[0];
+		  var b = x[1];
+		  return (a == 30 || b == 30 || a == 40 || b == 40);
+		}
+		console.log(check([]));
+		console.log(check([2,3]));
+		console.log(check([2,30]));
+		console.log(check([40,3]));
+		console.log(check([40,30]));
+	</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>
+		Write a JavaScript program to get the current date.<br>
+		Expected Output : <br>
+		mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy<br>
+	</p>
+	<script type="text/javascript">
+		var day = new Date();
+		var dd = day.getDate();
+		var mm = day.getMonth()+1;
+		var yyyy = day.getFullYear();	
+		document.write("<i> Expected Output <i> <br>");
+		var today = mm + "-" + dd + "-" + yyyy;
+		document.write(today +"<br>");
+		var today = mm + "/" + dd + "/" + yyyy;
+		document.write(today +"<br>");
+		var today = dd + "-" + mm + "-" + yyyy;
+		document.write(today +"<br>");
+		var today = dd + "/" + mm + "/" + yyyy;
+		document.write(today +"<br>");
+	</script>
+</body>
+</html>

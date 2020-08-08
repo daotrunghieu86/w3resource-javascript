@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		console.log("------------------------------");
+		for ( var i = 2014; i <= 2050; i++){
+		  var newdate = new Date(i, 0 , 1);
+		  if (newdate.getDay() === 0){
+		    console.log("1st January is being a Sunday is: " + i);
+		  }
+		}
+		console.log("------------------------------");
+	</script>
+</body>
+</html>

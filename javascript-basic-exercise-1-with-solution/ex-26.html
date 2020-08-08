@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(a){
+		  if (a.length >3){
+		    x = a.substring(a.length-3,a.length);
+		    return x + a + x;
+		  }
+		  return false;
+		}
+		console.log(check("abc"));
+		console.log(check("abcde"));
+		console.log(check("1234567"));
+	</script>
+</body>
+</html>

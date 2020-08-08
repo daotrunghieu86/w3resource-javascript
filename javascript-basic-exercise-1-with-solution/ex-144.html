@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(url){
+		  var data = url.split("://");
+		  var protocol = data[0];
+		  data = data[1];
+		  data = data.split("/");
+		  var urll = data[0];
+		  return [protocol, data[0], data[1]];
+		}
+		var url= "http://www.facebook.com/daotrunghieu86"
+		console.log(check(url));
+	</script>
+</body>
+</html>

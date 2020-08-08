@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x,k){
+		  x.sort((a,b) => b-a);
+		  return x[k-1];
+		}
+		// function check(arr, k) {
+		// arr.sort((a, b) => a - b); Chú ý phải sắp xếp số theo chiều giảm dần. Vậy phải đảo lại thứ tự b - a mới đúng chứ không phải a - b
+		// return arr[k - 1];
+		// }
+		console.log(check([2, 5, 3, 9, 7], 3)); 
+		console.log(check([99, 35, 27, 83, 10], 2)); 
+		console.log(check([-222, 40, -67, 221, 0], 1)); 
+	</script>	
+
+</body>
+</html>

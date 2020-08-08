@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  return (Math.abs(x[0]/x[1]) < 1) ?"Proper fraction" : "Improper fraction";
+		}
+		console.log(check([12, 300]));
+		console.log(check([2, 4]));
+		console.log(check([103, 3]));
+		console.log(check([104, 2]));
+		console.log(check([5, 40]));
+	</script>
+</body>
+</html>

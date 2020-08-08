@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x,y,z){
+		  if ((x%10 == y%10 || x%10 == z%10 || y%10 == z%10) || (x%10 == y%10 == z%10)){
+		    return true;
+		  }else{
+		    return false;
+		  }
+		}
+		console.log(check(1,1,2));
+		console.log(check(1,1,1));
+		console.log(check(10,12,2));
+		console.log(check(1,14,2));
+	</script>
+</body>
+</html>

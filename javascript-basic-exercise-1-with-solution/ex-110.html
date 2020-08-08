@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x,n){
+		  var result = 0;
+		  if (x.length < 1 || x[x.length-1] < n){
+		    return false;
+		  }
+		  for ( let i=0 ; x[i] <= n ; i++){
+		    if (x[i]%2 ===0){
+		      result++;
+		    }
+		  }
+		  return result;
+		}
+		console.log(check([1,4,6,7,9], 8))
+		console.log(check([1,4,5,6,7,8,9], 10))
+		console.log(check([1,2,4,5,6,7,8,9], 8))
+	</script>
+</body>
+</html>

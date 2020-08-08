@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(str){
+		  var result = [], 
+		      arr = str.split("");
+		  for (var i = 0; i < str.length; i++){
+		    if (str.indexOf(arr[i]) === str.lastIndexOf(arr[i])){
+		      result.push(arr[i]);
+		    }
+		  }
+		  return result.join("");
+		}
+		console.log(check("abcdabce"));
+	</script>
+</body>
+</html>

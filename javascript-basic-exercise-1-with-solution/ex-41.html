@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x,y,z){
+		  if (x==y && y==z){
+		    return 30;
+		  }else if (x==y || y==z || x==z){
+		    return 40;
+		  }else{
+		    return 20;
+		  }
+		}
+		console.log(check(8,9,8));
+		console.log(check(7,-1,6));
+		console.log(check(7,9,7));
+		console.log(check(7,7,7));
+	</script>
+</body>
+</html>

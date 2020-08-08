@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  if(x === null || x === undefined || x.substring(0,2) === "Py"){
+		    return x;
+		  }else{
+		    return "Py" + x;
+		  }
+		}
+		console.log(check("Python"));
+		console.log(check("python"));
+		console.log(check("thon"));
+	</script>
+</body>
+</html>

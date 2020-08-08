@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  if (x.length < 3){
+		    return x.toUpperCase();
+		  }else if (x.length = 3){
+		    return x.toLowerCase();
+		  }else if (x.length >3){
+		    var x1 = x.substring(0,3).toLowerCase();
+		    var x2 = x.substring(3,x.length-1);
+		    x = x1 + x2;
+		  }
+		  return x;
+		}
+		console.log(check("lol"));
+		console.log(check("Con ca"));
+		console.log(check("LOLl"));
+		console.log(check("ll"));
+	</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  var sum = 0;
+		  for (var i = 0 ; i < x.length ; i++){
+		    if ((x.charCodeAt(i) >= 48) && (x.charCodeAt(i) <= 57)){
+		      sum += parseInt(x[i]);
+		    }
+		  }
+		  return sum;
+		}
+		console.log(check("ls223lskd4"));
+	</script>
+	<br>
+	<script>
+		function check(x){
+		  var sum = 0;
+		  for (var i = 0; i < x.length ; i++){
+		    if (/[0-9]/.test(x[i])){
+		      sum += parseInt(x[i]);
+		    }
+		  }
+		  return sum;
+		}
+		console.log(check("34sdij23"));
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(num){
+		  var result = 0;
+		      arr = num.split("");
+		  for (var i = 0; i < num.length; i++){
+		    if (num.indexOf(arr[i]) === num.lastIndexOf(arr[i])){
+		      result++;
+		    }
+		  }
+		  if (result != 0){
+		    return ("Not Same");
+		  }else{
+		    return ("Same");
+		  }
+		}
+		console.log(check("123123"));
+		console.log(check("12123"));
+	</script>
+</body>
+</html>

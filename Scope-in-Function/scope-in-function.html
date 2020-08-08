@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+
+  // Global Scope
+  // window.whoIam = "Tao la hieu";
+  // console.log(window.whoIam);
+  // console.log(this.whoIam);
+  // console.log(window === this);
+
+  // Calling a Function
+  // window.whoIam = "Tao la hieu";
+  // function whoYouare() {
+  //   console.log(window.whoIam);
+  //   console.log(this.whoIam);
+  //   console.log(window === this);  //true
+  // }
+  // whoYouare();
+  // console.log("--------------------------");
+  // // Calling Object Methods
+  // window.whoamI = "Tao la hieu";
+
+  // function test() {
+  //   console.log(this);
+  //   this.whoamI = "I'm the test OBJECT";
+  //   this.check1 = function() {
+  //     console.log(this.whoamI);
+  //   }
+  //   console.log(this);
+  // }
+  // test.prototype.check2 = function() {
+  //   console.log(this.whoamI);
+  //   console.log(this);
+  // }
+
+  // test();
+  // var who = new test();
+  // who.check1();
+  // who.check2();
+  // console.log(typeof test);
+
+  // Use strict mode
+  // function foo () {
+  //   'use strict';
+  //   console.log("Simple function call")
+  //   console.log(this === window); 
+  //   console.log(this);
+  // }
+  // foo.apply(); // invoked
+  // foo(); // called
+
+  // “this” refers to new instance
+  // function Person(fn, ln) {
+  //   this.firstname = fn;
+  //   this.lastname = ln;
+  //   this.display = function() {
+  //     console.log(`Name: ${this.firstname} ${this.lastname}`);
+  //   } 
+  // }
+  // var hieu = new Person('Dao', 'Hieu');
+  // // hieu.display();
+  // console.log(typeof hieu);
+  // console.log(typeof Person);
+
+  // “this” refers to invoker object (parent object)
+    function foo() {
+      'use strict'
+      console.log('Simple function call');
+      console.log(this === window);
+      console.log(this);
+    }
+    let user = {
+      conunt: 10,
+      foo: foo,
+      foo1: function() {
+        console.log(this === window);
+        console.log(this);
+      }
+    }
+    // user.foo();
+    // foo();
+
+    // console.log(typeof foo1()); // foo1 is not defined
+    // không thể trích xuất được ra foo1 vì nó là 1 property của uer.
+
+    // console.log(foo1);  // foo1 is not defined
+    // console.log(foo1());  // foo1 is not defined
+    // console.log(typeof user.foo1);   // function
+    // console.log(user.foo1());   // chạy method foo1() và undefined ở dòng 91
+    // console.log(user.foo1);   // in ra thuộc tính foo1
+
+    // let fun1 = user.foo1;      // user.foo1 (user truy cập vào property foo1) sẽ trả về định nghĩa 1 hàm rồi gán sang cho fun1. Nên fun1 giờ là định dạng của 1 function
+    // user.foo1();                // user truy cập vào method foo1()
+    // fun1();
+    console.log(user.foo1);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  return Math.floor(x%10) + Math.floor(x/10);
+		}
+		console.log(check(18));
+	</script>
+	<hr>
+	<script>
+		function check(x){
+		  var y = x.toString().split("");
+		  return parseInt(y[0])+parseInt(y[1]);
+		}
+		console.log(check(18));
+	</script>
+</body>
+</html>

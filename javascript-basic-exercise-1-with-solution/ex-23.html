@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(a){
+		  if (a.length == 1){
+		    return a;
+		  }
+		  x = a.charAt(0);
+		  y = a.charAt(a.length - 1);
+		  mind = a.substring(1,a.length-1);
+		  return y + mind + x;
+		}
+		console.log(check("a"));
+		console.log(check("12345"));
+	</script>
+</body>
+</html>

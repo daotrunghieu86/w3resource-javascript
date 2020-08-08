@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  var max = 0;
+		  for (var i=0; i < x.length; i++){
+		    if (x[i]%2 == 0 && x[i] > max){
+		      max = x[i];
+		    }
+		  }
+		  return max;
+		}
+		console.log(check([12, 3, 33, 44]));
+	</script>
+
+</body>
+</html>

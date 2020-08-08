@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x,n){
+		  if (x.length >= n){
+		    var x = x.substring(0,n) + x.substring(x.length-n, x.length);
+		  }
+		  return x;
+		}
+		console.log(check("co",2));
+		console.log(check("c",1));
+		console.log(check("conca",2));
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  var result = x.match(/[ueoai]/gi);
+		// g tells to find all matches, not just the first.
+
+		// i tells to be case insensitive.
+
+		// What goes inside the '//'' is the pattern.
+
+		//[] tells to match any character in a set.
+
+		// aeiou are the characters in the set.
+		  return result.length;
+		}
+		console.log(check("conga con"));
+		console.log(check("Ueoai"));
+
+	</script>
+</body>
+</html>

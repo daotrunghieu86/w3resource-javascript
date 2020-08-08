@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x,y){
+		  var arr_x = x.sort((a,b) => a-b);
+		  var arr_y = y.sort((a,b) => a-b);
+		  var inde = arr_x.length-1;
+		  if ( arr_x[inde] == arr_y[0]){
+		    return true;
+		  }
+		  return false;
+		}
+		console.log(check([1,4,6],[9,6,8]));
+		console.log(check([1,2,3], [5,6,7]));
+		console.log(check([1,2,5,14,3], [14,19,15,43]));
+	</script>
+</body>
+</html>

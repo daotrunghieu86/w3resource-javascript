@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x,y,z){
+		  if (x>=20 && (x<y || x<z)){
+		    return true;
+		  }else if (y>=20 && (y<x || y<z)){
+		    return true;
+		  }else if (z>=20 && (z<x || z<y)){
+		    return true;
+		  }else{
+		    return false;
+		  }
+		}
+		console.log(check(12,30,44));
+		console.log(check(12,19,44));
+	</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  for (var i = x+1; ; i++){
+		    for (var j = 2; ; j++){
+		      if (i%j === 0){
+		        break;
+		      }
+		      else return i;
+		    }
+		  }
+		}
+		console.log(check(17));
+	</script>
+</body>
+</html>

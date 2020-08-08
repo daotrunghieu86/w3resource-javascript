@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x,a,r){
+		  var result = true;
+		  if (((x[0]+r) < a[0] ) && ((x[1]+r) < a[1])){
+		    result = false;
+		  }
+		  return result;
+		}
+		console.log(check([1,2],[5,6],2))
+		console.log(check([1,2],[5.1,6.5],4))
+		console.log(check([1,2],[5,6],4))
+	</script>
+</body>
+</html>

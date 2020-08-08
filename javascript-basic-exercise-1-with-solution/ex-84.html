@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  var all_chars = x.split("");
+		  for (var i=0; i < all_chars.length; i++){
+		    var n = all_chars[i].charCodeAt() - 'a'.charCodeAt();
+		    n = (n + 1) % 26;
+		    all_chars[i] = String.fromCharCode(n + 'a'.charCodeAt());
+		  }
+		  return all_chars.join("");
+		}
+		console.log(check("efghik"));
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function factorialEnding(a) {
+		let factorial = 1;
+		let count = 0;
+		for (let i = 1; i <= a; i++) {
+		factorial = factorial * i;
+		}
+		let x = factorial;
+		while (x > 0) { 
+		if (x % 10 === 0) count++; 
+		x = x / 10;
+		}
+		return count;
+		}
+
+		console.log(factorialEnding(20)); // 4
+	</script>
+</body>
+</html>

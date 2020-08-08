@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  if (x>0){
+		    var x1 = Math.floor(x/60);
+		    var x2 = x%60;
+		    return x1 + ":" + x2;
+		  }else{
+		    return false;
+		  }
+		}
+		console.log(check(900));
+		console.log(check(90));
+		console.log(check(39));
+	</script>
+</body>
+</html>

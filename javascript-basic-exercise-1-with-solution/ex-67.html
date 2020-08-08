@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  var a = 0;
+		  var b = x.length;
+		  if (x.length > 0 && x.charAt(0) === "P"){
+		    a = 1;
+		  }
+		  if (x.length > 1 && x.charAt(x.length-1) === "P"){
+		    b = x.length-1; // or b--; cũng đúng và chuyên nghiệp hơn
+		  }
+		  return x.substring(a,b);
+		}
+		console.log(check("Python"));
+		console.log(check("PythonP"));
+		console.log(check("P"));
+		console.log(check("ython"));
+	</script>
+</body>
+</html>

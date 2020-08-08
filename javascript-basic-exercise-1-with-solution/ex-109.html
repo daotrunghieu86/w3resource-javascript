@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  var arr_1 = [];
+		  var arr_2 = [];
+		  for ( var i=0; i <= x ; i++){
+		    arr_2[i] = true;
+		  }
+		  for ( var i=2 ; i <= x ; i++){
+		    if (arr_2[i]){
+		      arr_1.push(i);
+		    }
+		    for (var j=2 ; j <= x ; j++){
+		        arr_2[i*j] = false;
+		      }
+		    }
+		  return arr_1;
+		}
+		  
+		console.log(check(19));
+
+	</script>
+</body>
+</html>

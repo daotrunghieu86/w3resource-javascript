@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(a,b,c){
+		  if (a>b && a>c){
+		    var max = a;
+		  }
+		  if (b>a && b>c){
+		    var max = b;
+		  }
+		  if (c>a && c>b){
+		    var max = c;
+		  }
+		  return max;
+		}
+		console.log(check(123,12,3));
+		console.log(check(5,312,3));
+	</script>
+</body>
+</html>

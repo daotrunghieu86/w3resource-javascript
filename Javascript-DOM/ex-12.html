@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    a{
+      color: black;
+      text-decoration: none;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <a onmouseover="mouseover()" onmouseout="mouseout()" href="#">Mouse over</a>
+  <a id="link" href="#">Mouse over</a>
+  <p>Lorem ipsum dolor sit <strong>amet</strong>  consectetur adipisicing elit. Beatae nulla repellat excepturi et <strong>animi</strong>autem accusamus molestiae, ullam <strong>natus</strong> natus reiciendis animi labore, velit sit expedita laudantium, obcaecati <strong>natus</strong>reprehenderit minus! Unde!</p>
+
+
+  <script>
+    var bold_items;
+    window.onload = getBoldItems();
+    function getBoldItems(){
+    bold_items = document.getElementsByTagName("strong");
+    }
+    function mouseover(){
+        for (var i=0 ; i < bold_items.length; i++){
+            bold_items[i].style.color = "red";
+        }
+    }
+    function mouseout(){
+        for (var i=0 ; i < bold_items.length; i++){
+            bold_items[i].style.color = "black";
+        }
+    }
+
+////////
+
+    window.onload = highlight();
+    function highlight(){
+    document.querySelectorAll('strong').forEach(function(elem) {
+        elem.addEventListener('mouseover', function() {
+        this.style.color = 'yellow';
+        }, false);
+        elem.addEventListener('mouseout', function() {
+        this.style.color = 'white';
+        }, false);
+    })
+    }      
+    // phải move vào element strong thì lệnh đổi màu mới thực hiện được
+
+    window.onload = highlight();
+
+//////////
+
+    function highlight(){
+  var link = document.getElementById("link"), 
+      elems = document.getElementsByTagName('strong'), 
+      item;
+
+  link.addEventListener("mouseover", function( ) { 
+  for (item of elems){
+  item.style.color = 'green';
+  }
+  }, false);
+
+  link.addEventListener("mouseout", function( ) { 
+  for (item of elems){
+  item.style.color = 'black';
+  }
+  }, false);
+
+  };
+  highlight();
+
+
+////
+
+const show = document.getElementsByTagName('strong');
+  [...show].forEach(item => item.style.color = 'white');
+  function highlight() {
+    [...show].forEach(item => item.style.color = 'blue');
+  }
+  function return_normal() {
+    [...show].forEach(item => item.style.color = 'white');
+  }
+  </script>
+</body>
+</html>

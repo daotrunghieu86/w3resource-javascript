@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  if (x > 180 || x <= 0){
+		    return false;
+		  }else{
+		    if (x>0 && x<90){
+		      return "Acute angle";
+		    }else if (x==90){
+		      return "Right angle";
+		    }else if (x>90 && x<180){
+		      return "Obtuse angle";
+		    }else if (x==180){
+		      return "Straight angle";
+		    }
+		  }
+		}
+		console.log(check(99));
+		console.log(check(90));
+		console.log(check(50));
+		console.log(check(190));
+		console.log(check(160));
+	</script>
+</body>
+</html>

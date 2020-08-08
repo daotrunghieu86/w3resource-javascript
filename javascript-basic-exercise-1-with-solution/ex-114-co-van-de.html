@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  var first = x[0];
+		  var end = x[x.length-1];
+		  // return (/[A-Z]/.test(first) && end === "." );
+		  if (/[A-Z]/.test(first) && end === "."){
+		    return true;
+		  }else false;
+		  // 2 cách giống nhau sao không ra kết quả???
+		}
+		console.log(check("conca"));
+	</script>
+
+</body>
+</html>

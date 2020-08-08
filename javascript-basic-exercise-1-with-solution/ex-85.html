@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  var result = [0,0];
+		  for ( var i=0; i < x.length; i++){
+		    // chú ý dãy có 8 chữ số thì i chỉ chạy đến 7 thôi vì bắt đầu từ 0; để chạy đến 8 sẽ không có dữ liệu được chạy và sẽ có lỗi sai
+		    if (i % 2 == 0){
+		      result[0] += x[i];
+		    }else{
+		      result[1] += x[i];
+		    }
+		  }
+		  return result;
+		}
+		console.log(check([1,2,3,4,7,9,3,8]));
+	</script>
+</body>
+</html>

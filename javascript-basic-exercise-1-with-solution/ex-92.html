@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  var result = 0;
+		  for ( var i=0 ; i < x.length-1; i++){
+		    let sign = Math.abs(x[i] - x[i+1]);
+		    if (result < sign);
+		      result = sign;
+		  }
+		  return result;
+		}
+		console.log(check([1,4,2,5]));
+		console.log(check([1,4,2,5,19]));
+	</script>
+</body>
+</html>

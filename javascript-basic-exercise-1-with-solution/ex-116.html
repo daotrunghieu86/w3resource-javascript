@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  var begin = "0".charCodeAt(),
+		      end = "9".charCodeAt(),
+		      sum = 0,
+		      result = [],
+		      y = x.split('');
+		      hash_pos = -1;
+
+		  for (var i=0; i < y.length ; i++){
+		    if (y[i].charCodeAt() >= begin && y[i].charCodeAt() <= end){
+		      sum += y[i].charCodeAt() - begin;
+		    }else {
+		      hash_pos = i;
+		    }
+		  }
+
+		  for (var i=0 ; i < 10 ; i++){
+		    if ((sum + i) %3 == 0){
+		      y[hash_pos] = String.fromCharCode(begin + i);
+		      result.push(y.join(''));
+		    }
+		  }
+		  return result;
+		}
+		console.log(check("23#2"));
+		console.log(check("2#0"))
+		console.log(check("4#2"))
+	</script>
+</body>
+</html>

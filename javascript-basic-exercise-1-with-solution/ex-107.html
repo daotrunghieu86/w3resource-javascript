@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  var ctr = 0;
+		  if (x.length > 1){
+		    for (let i=0 ; i < x.length ; i++){
+		      for (let j=i+1 ; j < x.length ; j++){
+		        if (x[i] % x[j] == 0 || x[j] % x[i] == 0){
+		          ctr++; 
+		        }
+		      }
+		    }
+		  }else false;
+		  return ctr;
+		}
+		console.log(check([1,2]));
+		console.log(check([2, 4, 6]));
+		console.log(check([2, 4, 16]));
+		console.log(check([2, 16,4]));
+	</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x,y){
+		  var arrange_x = x.split("").sort();
+		  var arrange_y = y.split("").sort();
+		  var result = true;
+		  if (arrange_x.length == arrange_y.length){
+		    for (let i=0; i < arrange_x.length ; i++){
+		      if (arrange_x[i] !== arrange_y[i]){
+		        result = false;
+		      }
+		    }
+		  }else false;
+		  return result;
+		  // console.log(arrange_x);
+		  // console.log(arrange_y);
+		}
+		console.log(check("alsdk","dklad"));
+		console.log(check("xyz", "zyx"));
+		console.log(check("xyz", "zyp"));
+		console.log(check("xyz", "xyz"));
+	</script>
+</body>
+</html>

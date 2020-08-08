@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function longest(arr) {
+			let len = 0, lngst;
+			for (let i = 0; i < arr.length; i++) {
+			if (arr[i].length > len) {
+			len = arr[i].length;
+			lngst = arr[i];
+			}
+			}
+			return lngst;
+			}
+			let arr = ['a', 'ab', 'abcdefgh', 'abcd', 'abcde'];
+			console.log(longest(arr));
+	</script>
+</body>
+</html>

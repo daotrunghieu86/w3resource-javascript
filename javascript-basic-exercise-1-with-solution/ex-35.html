@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(str, x){
+		  ctr = 0;
+		  for (let i=0; i<=str.length; i++){
+		    if (str.charAt(i) == x){
+		      ctr++;
+		    }
+		  }
+		  return (ctr>=2 && ctr<=4);
+		}
+		console.log(check("concavang","a"));
+		console.log(check("concavang","co"));
+		console.log(check("concavang","n"));
+	</script>
+</body>
+</html>

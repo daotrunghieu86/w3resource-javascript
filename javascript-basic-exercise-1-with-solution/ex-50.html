@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  var x = x.split(" ");
+		  for (i=0; i<x.length; i++){
+		    x[i] = x[i][0].toUpperCase() + x[i].substr(1);
+		  }
+		  return x.join(" ");
+		}
+		console.log(check("con ca vang"));
+	</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x,y){
+		  var part1 = x.substring(0,y);
+		  var part2 = x.substring(y+1,x.length);
+		  return (part1+part2);
+		}
+		console.log(check("abcdefgh",0));
+		console.log(check("abcdefgh",3));
+		console.log(check("abcdefgh",5));
+	</script>
+</body>
+</html>

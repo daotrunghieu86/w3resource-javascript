@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x,y){
+		  var test = 0;
+		  if (x.length == y.length){
+		    for (var i=0 ; i < x.length ; i++){
+		      if (x[i] == y[i]){
+		        test++;
+		      }else{
+		        return false;
+		      }
+		      if (test == x.length){
+		        return true;
+		      }
+		    }
+		  }else{
+		    return false;
+		  }
+		}
+		console.log(check([1,2,3],[1,2,3]));
+		console.log(check([1,7,3],[1,2,87]));
+		console.log(check([1,2,3,9],[1,2,3]));
+	</script>
+</body>
+</html>

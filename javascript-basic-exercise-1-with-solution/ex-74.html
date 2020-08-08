@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  if (x[0] - x[x.length-1] > 0){
+		    for (let i=0; i < x.length; i++){
+		      x[i] = x[0];
+		    }
+		    return x;
+		  }
+		  if (x[0] - x[x.length-1] < 0){
+		    for (let i=0; i < x.length; i++){
+		      x[i] = x[x.length-1];
+		    }
+		    return x;
+		  }
+		  if (x[0] - x[x.length-1] == 0){
+		    for (let i=0; i < x.length; i++){
+		      x[i] = x[0];
+		    }
+		    return x;
+		  }
+		}
+		console.log(check([1,2,3,4,5,6,1]));
+		console.log(check([1,2,3,4,5,6,9]));
+	</script>
+</body>
+</html>

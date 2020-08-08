@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Change the content of a cell</title>
+<style type="text/css">
+body {margin: 30px;}
+</style>  
+</head><body>
+<table id="myTable" border="1">
+  
+</table><form>
+<input type="button" onclick="createTable()" value="Create the table">
+</form>
+	<script>
+		function createTable(){
+			var row = window.prompt("Input the numbers of rows (0-10)","0");
+			var cell = window.prompt("Input the numbers of cells (0-10)","0");
+			for (var i = 0; i < parseInt(row,10); i++){
+				var x = document.getElementById("myTable").insertRow(i);
+				for (var j = 0; j < parseInt(cell,10); j++){
+					var y = x.insertCell(j);
+					y.innerHTML = "Rows-"+i+"Cells-"+j;
+				}
+			}
+		}
+
+
+		function createTable() {
+			const x = prompt('Input the number row'),
+			y = prompt('Input the number column'),
+			table = document.getElementById('myTable');
+			
+			for (var i = 0; i < x; i++) {
+				let row = table.insertRow(i);
+				for (var j = 0; j < y; j++) {
+					let cell = row.insertCell(j);
+					cell.innerHTML = `Row${i} Column${j}`;
+					row.appendChild(cell);
+					table.appendChild(row);
+				}
+			}
+		}
+
+		function createTable() {
+			const x = prompt('Input the number row'),
+			y = prompt('Input the number column'),
+			table = document.getElementById('myTable');
+			
+			for (var i = 0; i < x; i++) {
+			let row = document.createElement('tr');
+			for (var j = 0; j < y; j++) {
+				let cell = document.createElement('td');
+				cell.innerHTML = `Row${i} Column${j}`;
+					row.appendChild(cell);
+					table.appendChild(row);
+				}
+			}
+		}
+	</script>
+</body></html>

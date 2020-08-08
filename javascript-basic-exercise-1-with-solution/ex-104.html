@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x,k){
+			var max_value = -1;
+			for ( let i = 0; i < x.length ; i++){
+				for ( let j = i+1 ; j < x.length ; j++){
+					var diff_value = Math.abs(x[i] - x[j]);
+					if ( diff_value <= k){
+						max_value = Math.max(diff_value, k);
+					}
+				}
+			}
+			return max_value;
+		}
+		console.log(check([1,4,7,3,8],4));
+	</script>
+</body>
+</html>

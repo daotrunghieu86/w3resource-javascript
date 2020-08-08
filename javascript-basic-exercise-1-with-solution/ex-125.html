@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function  check(x){
+		  var max = 0;
+		  var result;
+		  for (var i=0; i < x.length ; i++){
+		    if (x[i].length > max){
+		      max = x[i].length;
+		      result = x[i];
+		    } 
+		  }
+		  return result;
+		}
+		console.log(check(["134","3","sdfklj"]));
+	</script>
+</body>
+</html>

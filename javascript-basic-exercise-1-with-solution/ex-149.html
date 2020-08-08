@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  var result = [];
+		  for (var i = 0; i < x.length ; i++){
+		    if (/[a-z]/.test(x[i])){
+		      result.push(x[i].toUpperCase());
+		    }else if (/[A-Z]/.test(x[i])){
+		      result.push(x[i].toLowerCase());
+		    }else{
+		      result.push(x[i]);
+		      continue;
+		    }
+		  }
+		  return result.join("");
+		}
+		console.log(check("anh#depTRAI"));
+	</script>
+	<br>
+	<script>
+		function check(x){
+		  var result = "";
+		  for (var i = 0; i < x.length; i++){
+		    if (/[a-z]/.test(x[i])){
+		      result += x[i].toUpperCase();
+		    }else result += x[i].toLowerCase();
+		  }
+		  return result;
+		}
+		console.log(check("123absXYZ"))
+	</script>
+</body>
+</html>

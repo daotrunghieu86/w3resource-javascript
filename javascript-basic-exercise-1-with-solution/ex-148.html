@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  x = x.split("");
+		  return x.reverse().join("");
+		}
+		console.log(check("123456"))
+	</script>
+	<br>
+	<script>
+		function check(x){
+		  if (x.length % 2 === 0){
+		    var y = x.substring(0,x.length/2);
+		    var z = x.substring(x.length/2, x.length);
+		  }
+		  return z+y;
+		}
+		console.log(check("123456"))
+	</script>
+</body>
+</html>

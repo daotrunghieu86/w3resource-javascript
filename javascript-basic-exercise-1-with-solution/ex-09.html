@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var nowday = new Date();
+		var cmas = new Date(nowday.getFullYear(), 11, 25);
+		if (nowday.getMonth() == 11 && nowday.getDate() > 25){
+			cmas.setFullYear(cmas.getFullYear());
+		}
+		var oneday = 1000*60*60*24;
+		console.log(Math.ceil((cmas.getTime() - nowday.getTime()) / oneday) + " days left until Chrismats!");
+	</script>
+</body>
+</html>

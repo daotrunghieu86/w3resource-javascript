@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  if (x.length == 3){
+		    if (x[0] == x[2]){
+		      return true;
+		    }else{
+		      return false;
+		    }
+		  }else{
+		    return false;
+		  }
+		}
+		console.log(check([1,2,1]));
+		console.log(check([1,1]));
+		console.log(check([1,2,5]));
+	</script>
+</body>
+</html>

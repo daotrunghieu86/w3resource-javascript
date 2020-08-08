@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x,y){
+		  if ((x>=40)&&(x<=60)&&(y>=40)&&(y<=60) || 
+		      (x>=70)&&(x<=100)&&(y>=70)&&(y<=100) ){
+		        return true;
+		      }
+		      else{
+		        return false;
+		      }
+		  
+		}
+		console.log(check(55, 56));
+		console.log(check(55, 76));
+		console.log(check(35, 56));
+		console.log(check(155, 86));
+		console.log(check(75, 86));
+	</script>
+</body>
+</html>

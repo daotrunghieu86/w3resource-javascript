@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  if (x.length>2){
+		    var x = x.substring(1,x.length-1);
+		    return x;
+		  }else{
+		    return false;
+		  }
+		}
+		console.log(check("1234"));
+		console.log(check(""));
+	</script>
+</body>
+</html>

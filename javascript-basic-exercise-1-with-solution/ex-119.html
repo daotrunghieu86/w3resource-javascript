@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  var ctr = 1;
+		  var arr = x.toString().split("");
+		  for ( var i=1; i < arr.length; i++){
+		    if (arr[i-1] < arr[i]){
+		      ctr++;
+		    }
+		  }
+		  // return ctr;
+		  if (ctr < arr.length){
+		    return false;
+		  }else{
+		    return true;
+		  }
+		}
+		console.log(check(12325));
+		console.log(check(12345));
+		console.log(check(45677));
+	</script>
+	<br>
+	<script>
+		function check(x){
+		  var result = true;
+		  var arr = x.toString().split("");
+		  for ( var i=1; i < arr.length-1; i++){
+		    if (arr[i] > arr[i+1]){
+		      result = false;
+		    }
+		  }
+		  return result;
+		}
+		console.log(check(12325));
+		console.log(check(12345));
+		console.log(check(45677));
+	</script>
+</body>
+</html>

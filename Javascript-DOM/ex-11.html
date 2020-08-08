@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    body{
+      margin: 4rem;
+    }
+    input{
+      display: block;
+      margin-bottom: 2rem;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <input type="button" onclick="clickme()" value="Change Img">
+  <script>
+    function clickme(){
+      var list = [
+        {src: "//picsum.photos/200/300",
+        // width: "300", height: "200" 
+        },
+        {src: "//picsum.photos/300/300",
+        // width: "300", height: "300" 
+        },
+        {src: "//picsum.photos/400/300",
+        // width: "300", height: "400" 
+        }
+      ];
+      var listimg = [];
+      for (var i = 0; i < list.length; i++){
+        listimg[i] = new Image();
+        // listimg[i].width = list[i].width;
+        listimg[i].src = list[i].src;
+        // listimg[i].height = list[i].height;
+      }
+
+      var newimg = listimg[Math.floor(Math.random()*listimg.length)];
+      var images = document.getElementsByTagName("img");
+      for (var j = 0; j < images.length; j++){
+        images[j].parentNode.removeChild(images[j]);
+      }
+      document.body.appendChild(newimg);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  var sum = x;
+		  for (let i=2 ; i <= x ; i*=2){
+		  	// i tăng lên i*2 đơn vị
+		    sum += Math.floor(x/i);
+		  }
+		  return sum;
+		}
+		console.log(check(7));
+		console.log(check(8))
+		console.log(check(9))
+		console.log(check(26))
+	</script>
+</body>
+</html>

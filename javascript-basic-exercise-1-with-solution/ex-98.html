@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function check(x){
+		  var frequency_1 = 0;
+		  var frequency_2 = 0;
+		  for ( let i=0; i < x.length ; i++){
+		    if (x.charCodeAt([i]) >=65 || x.charCodeAt([i]) <= 90){
+		      frequency_1++;
+		    }else if ((x.charCodeAt([i]) >=97 || x.charCodeAt([i]) <= 122)){
+		      frequency_2++;
+		    }
+		  }
+		  if (frequency_1 > frequency_2){
+		    return x.toLowerCase();
+		  }else{
+		    return x.toUpperCase();
+		  }
+		}
+		console.log(check("dGddKxxeee"));
+	</script>
+	<hr>
+	<script>
+		function check(x){
+		  var a = 0;
+		  var b = 0;
+		  for ( let i=0 ; i < x.length; i++){
+		    if (/[A-Z]/.test(x[i])){
+		      a++;
+		    }else{
+		      b++;
+		    }
+		  }
+		  if (a < b){
+		    return x.toLowerCase();
+		  }else{
+		    return x.toUpperCase();
+		  }
+		}
+		console.log(check("asHjdH"));
+	</script>
+</body>
+</html>
